@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mechanical Motion Lab</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="tag">Mechanical Motion Lab</p>
+      <h1>机械机构可视化学习平台</h1>
+      <p class="subtitle">
+        一个面向机械零基础学习者的入门项目：用 HTML、CSS 和 JavaScript
+        可视化展示曲柄滑块机构与齿轮传动，并整理中日英机械术语。
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>项目背景</h2>
+      <p>
+        我本科阶段主修日语，正在申请机械设计制造及其自动化第二学士学位。
+        由于机械基础相对薄弱，我希望先从经典机械机构入手，通过可视化动画理解机械运动原理。
+        本项目选择曲柄滑块机构和齿轮传动作为入门对象，并结合中日英术语整理，
+        展示我对机械学习的主动性与跨学科能力。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>一、曲柄滑块机构</h2>
+      <p>
+        曲柄滑块机构可以把旋转运动转化为往复直线运动，常见于发动机活塞、冲压机、往复泵等机械结构中。
+      </p>
+
+      <div class="lab-area">
+        <canvas id="sliderCanvas" width="720" height="280"></canvas>
+      </div>
+
+      <div class="controls">
+        <label>
+          速度：
+          <input id="sliderSpeed" type="range" min="1" max="10" value="4" />
+        </label>
+      </div>
+
+      <p class="note">
+        观察重点：左侧曲柄持续旋转，中间连杆带动右侧滑块做水平往复运动。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>二、齿轮传动</h2>
+      <p>
+        齿轮传动通过轮齿啮合传递运动和动力。小齿轮与大齿轮啮合时，两者旋转方向相反，
+        且转速与齿数/半径有关。
+      </p>
+
+      <div class="lab-area">
+        <canvas id="gearCanvas" width="720" height="300"></canvas>
+      </div>
+
+      <div class="controls">
+        <label>
+          速度：
+          <input id="gearSpeed" type="range" min="1" max="10" value="4" />
+        </label>
+      </div>
+
+      <p class="note">
+        观察重点：两个齿轮反向旋转，大齿轮转得更慢，小齿轮转得更快。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>三、中日英机械术语表</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>中文</th>
+            <th>English</th>
+            <th>日本語</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>齿轮</td><td>gear</td><td>歯車（はぐるま）</td></tr>
+          <tr><td>曲柄</td><td>crank</td><td>クランク</td></tr>
+          <tr><td>连杆</td><td>connecting rod</td><td>コネクティングロッド</td></tr>
+          <tr><td>滑块</td><td>slider</td><td>スライダー</td></tr>
+          <tr><td>轴</td><td>shaft</td><td>軸（じく）</td></tr>
+          <tr><td>轴承</td><td>bearing</td><td>ベアリング</td></tr>
+          <tr><td>装配</td><td>assembly</td><td>組立（くみたて）</td></tr>
+          <tr><td>传动比</td><td>gear ratio</td><td>歯車比（はぐるまひ）</td></tr>
+          <tr><td>往复运动</td><td>reciprocating motion</td><td>往復運動（おうふくうんどう）</td></tr>
+          <tr><td>旋转运动</td><td>rotary motion</td><td>回転運動（かいてんうんどう）</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>四、学习反思与后续计划</h2>
+      <p>
+        通过本项目，我初步理解了机械运动中“旋转—直线往复”的转换关系，
+        以及齿轮传动中转速、方向和传动关系的基本概念。未来如果进入机械设计制造及其自动化专业，
+        我希望系统学习工程图学、机械原理、机械设计、CAD、SolidWorks 和智能制造，
+        并结合日语、英语和编程能力，向智能制造、机器人应用和日资制造业技术支持方向发展。
+      </p>
+      <ul>
+        <li>第1阶段：补工程图学、机械制图、CAD 基础。</li>
+        <li>第2阶段：学习 SolidWorks 零件建模与装配。</li>
+        <li>第3阶段：学习机械原理、机械设计和制造工艺。</li>
+        <li>第4阶段：尝试结合 Python / AI 做质量管理、设备点检或机械学习工具。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Dong Xiaojian · Mechanical Motion Lab</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
